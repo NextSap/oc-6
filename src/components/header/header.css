@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 7% 50px 7%;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.link {
+    color: #FF6060;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+}

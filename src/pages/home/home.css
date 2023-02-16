@@ -1,0 +1,38 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7% 43px 7%;
+    height: 223px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%), url("../../assets/home_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.home-background h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.accommodations-section {
+    margin: 0 7% 0 7%;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+}
+
+.accommodations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 50px;
+}

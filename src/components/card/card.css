@@ -1,0 +1,16 @@
+.card {
+    display: flex;
+    align-items: flex-end;
+    height: 335px;
+    width: 335px;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card p {
+    padding-left: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}

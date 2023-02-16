@@ -1,32 +1,16 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Home from "./pages/Home";
-import Error from "./components/Error";
-import Logement from "./pages/Logement";
+import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom";
+import Home from "./pages/home/Home";
+import Accommodations from "./pages/accommodations/Accommodations";
 import About from "./pages/About";
+import Error from "./components/error/Error";
 
-const Router = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route
-                    path="/"
-                    element={<Home/>}
-                    errorElement={<Error/>}
-                />,
-                <Route
-                    path="/logements/:id"
-                    element={<Logement/>}
-                    errorElement={<Error/>}
-                />,
-                <Route
-                    path="/about"
-                    element={<About/>}
-                    errorElement={<Error/>}
-                />
-            </Routes>
-        </BrowserRouter>
-    );
-};
-
-export default Router;
+export const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path="/" errorElement={<Error/>}>
+            <Route path="/" element={<Home/>}/>
+            <Route path="accommodations/:id" element={<Accommodations/>}/>
+            <Route path="about" element={<About/>}/>
+        </Route>
+    )
+);

@@ -1,0 +1,35 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #FF6060;
+    height: 100%;
+}
+
+.error div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.error div h1 {
+    font-size: 288px;
+    padding: 0;
+    margin: 0;
+}
+
+.error div p {
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+}
+
+.backlink {
+    font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
+}

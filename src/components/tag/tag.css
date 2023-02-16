@@ -1,0 +1,11 @@
+.tag {
+    background-color: #FF6060;
+    height: 25px;
+    width: 115px;
+}
+
+.tag p {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
