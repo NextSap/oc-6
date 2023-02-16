@@ -1,0 +1,40 @@
+.collapse {
+    width: 45%;
+}
+
+.collapse button {
+    background-color: #FF6060;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.collapse span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 0 20px;
+}
+
+.content {
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    display: none;
+    min-height: 250px;
+    width: 100%
+}
+
+.content p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FF6060;
+    margin: 0;
+    padding: 30px 12px 10px 20px;
+    white-space: pre-wrap;
+    line-height: 25px;
+}

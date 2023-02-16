@@ -11,8 +11,8 @@ const Home = () => {
             <div className="home-background">
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
-            <div className="accommodations-section">
-                <div className="accommodations-container">
+            <div className="home-accommodations-section">
+                <div className="home-accommodations-container">
                     {accommodations.map(accommodation => {
                         return (
                             <Card key={accommodation.id} id={accommodation.id} title={accommodation.title} cover={accommodation.cover}/>

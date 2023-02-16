@@ -23,13 +23,13 @@
     font-size: 48px;
 }
 
-.accommodations-section {
+.home-accommodations-section {
     margin: 0 7% 0 7%;
     background-color: #F6F6F6;
     border-radius: 25px;
 }
 
-.accommodations-container {
+.home-accommodations-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

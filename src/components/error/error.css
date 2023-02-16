@@ -1,28 +1,30 @@
 .error {
+    overflow: auto;
+}
+
+.error-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     color: #FF6060;
-    height: 100%;
 }
 
-.error div {
+.error-container div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
-.error div h1 {
+.error-container div h1 {
     font-size: 288px;
     padding: 0;
     margin: 0;
 }
 
-.error div p {
+.error-container div p {
     font-size: 36px;
     padding: 0;
     margin: 0;
@@ -32,4 +34,5 @@
     font-size: 18px;
     text-decoration: underline;
     cursor: pointer;
+    padding-top: 180px;
 }
