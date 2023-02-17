@@ -4,10 +4,11 @@ import accommodations from "../../accommodations.json";
 import Header from "../../components/header/Header";
 import Tag from "../../components/tag/Tag";
 import Collapse from "../../components/collapse/Collapse";
-import Slideshow from "../../components/Slideshow";
+import Slideshow from "../../components/slideshow/Slideshow";
 import "./accommodations.css";
 import Red from "../../assets/red_star.png";
 import Grey from "../../assets/grey_star.png";
+import Footer from "../../components/footer/Footer";
 
 
 const Accommodations = () => {
@@ -24,6 +25,7 @@ const Accommodations = () => {
         <div className="accommodations">
             <Header/>
             <div className="accommodations-container">
+                <div className="test"></div>
                 <Slideshow pictures={accommodation.pictures}/>
                 <div className="informations-section">
                     <div className="article-header">
@@ -51,6 +53,7 @@ const Accommodations = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

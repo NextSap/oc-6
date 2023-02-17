@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import "./header.css";
-import red_logo from "../../assets/logo_red.png";
+import RedLogo from "../../assets/logo_red.png";
 
 const Header = () => {
     return (
         <div onLoad={() => {
             changeNavStatusListener()
         }} className="header">
-            <img src={red_logo} alt="Logo Kasa rouge"/>
+            <img src={RedLogo} alt="Logo Kasa rouge"/>
             <nav>
                 <Link className="link" to="/"><span id="/">Accueil</span></Link>
                 <Link className="link" to="/about"><span id="/about">À propos</span></Link>

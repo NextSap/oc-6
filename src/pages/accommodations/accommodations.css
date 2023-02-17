@@ -1,17 +1,21 @@
 .accommodations {
+    display: flex;
+    flex-direction: column;
     overflow: auto;
+    min-height: 100vh;
 }
 
 .accommodations-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 7% 0 7%;
+    margin: 0 7% 30px 7%;
 }
 
 .informations-section {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .article-header {

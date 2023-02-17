@@ -1,0 +1,41 @@
+.slideshow {
+    display: flex;
+    justify-content: space-between;
+    height: 415px;
+    width: 100%;
+    border-radius: 25px;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slideshow div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 10px 0 10px;
+}
+
+.slideshow img {
+    height: 80px;
+}
+
+.left-arrow {
+    cursor: pointer;
+}
+
+.right-arrow {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.slideshow p {
+    display: flex;
+    align-items: flex-end;
+    height: 90%;
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+}
+

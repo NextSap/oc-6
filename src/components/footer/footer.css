@@ -1,0 +1,18 @@
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 180px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    bottom: 0;
+}
+
+.footer p {
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+}

@@ -3,6 +3,7 @@ import Header from "../../components/header/Header";
 import accommodations from "../../accommodations.json";
 import Card from "../../components/card/Card";
 import "./home.css";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
                     })}
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };
