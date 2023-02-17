@@ -46,8 +46,8 @@ const Accommodations = () => {
                         </div>
                     </div>
                     <div className="description">
-                        <Collapse name="Description" content={accommodation.description}/>
-                        <Collapse name="Équipements" content={arrayToString(accommodation.equipments)}/>
+                        <Collapse name="Description" content={accommodation.description} minHeightContent={"250px"}/>
+                        <Collapse name="Équipements" content={arrayToString(accommodation.equipments)} minHeightContent={"250px"}/>
                     </div>
                 </div>
             </div>
