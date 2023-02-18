@@ -15,13 +15,13 @@ const Slideshow = ({pictures}) => {
     }
 
     return (
-        <div className="slideshow" style={{backgroundImage: "url('"+pictures[index]+"')"}}>
+        <div className="slideshow" style={{backgroundImage: "url('" + pictures[index] + "')"}}>
             <div style={{display: pictureAmount <= 1 ? "none" : null}} className="slideshow-container">
                 <div className="left-arrow-div">
                     <img onClick={previousImage} className="left-arrow" src={Arrow} alt="Flèche gauche"/>
                 </div>
                 <p>{index + 1}/{pictureAmount}</p>
-                <div  className="right-arrow-div">
+                <div className="right-arrow-div">
                     <img onClick={nextImage} className="right-arrow" src={Arrow} alt="Flèche droite"/>
                 </div>
             </div>

@@ -84,6 +84,7 @@ function colorStars(rating) {
 
     for (let i = 0; i < 5; i++) {
         const star = document.createElement("img");
+        star.alt = "Etoile de notation";
 
         if (redStarsAmount > 0)
             star.src = Red;
