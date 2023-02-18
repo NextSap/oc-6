@@ -4,10 +4,11 @@ import Arrow from "../../assets/arrow.png";
 
 const Collapse = ({name, content, width, minHeightContent}) => {
     const [open, setOpen] = useState(false);
+
     return (
         <div style={{width: width}} className="collapse">
             <button onClick={() => {
-                setOpen(!open)
+                setOpen(!open);
             }} className="collapse-button"><span>{name}<img style={{transform: open ? null : "rotate(-180deg)"}}
                                                             alt="Flèche" src={Arrow}/></span></button>
             <div style={{display: open ? "block" : null}} className="content">
@@ -16,5 +17,4 @@ const Collapse = ({name, content, width, minHeightContent}) => {
         </div>
     );
 };
-
 export default Collapse;

@@ -32,7 +32,31 @@
 .home-accommodations-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 60px;
     padding: 50px;
+}
+
+@media screen and (max-width: 819px) {
+    .home-background {
+        margin: 0 21px 43px 21px;
+    }
+
+    .home-background h1 {
+        font-size: 32px;
+        margin-left: 16px;
+    }
+
+    .home-accommodations-section {
+        display: flex;
+        justify-content: center;
+        margin: 0 21px 30px 21px;
+        background-color: white;
+    }
+
+    .home-accommodations-container {
+        width: 100%;
+        gap: 20px;
+        padding: 0;
+    }
 }

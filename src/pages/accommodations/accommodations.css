@@ -35,17 +35,19 @@
 
 .title h1 {
     font-size: 36px;
-    height: 51px;
+    line-height: 40px;
 }
 
 .title h2 {
     font-size: 18px;
     height: 26px;
-    margin-bottom: 20px;
+    margin: 10px 0 20px 0;
 }
 
 .tags {
     display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
     gap: 10px;
 }
 
@@ -88,4 +90,48 @@
     display: flex;
     justify-content: space-between;
     margin-top: 26px;
+}
+
+@media screen and (max-width: 819px) {
+    .accommodations-container {
+        margin: 0 21px 30px 21px;
+    }
+
+    .article-header {
+        flex-direction: column;
+    }
+
+    .title h1 {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    .title h2 {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .owner {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .host {
+        align-items: center;
+    }
+
+    .host img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .rating {
+        height: 20px;
+        width: 150px;
+    }
+
+    .description {
+        flex-direction: column;
+        gap: 10px;
+    }
 }

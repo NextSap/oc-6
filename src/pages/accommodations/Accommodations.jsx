@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import accommodations from "../../accommodations.json";
 import Header from "../../components/header/Header";
@@ -13,6 +13,7 @@ import Footer from "../../components/footer/Footer";
 
 const Accommodations = () => {
     const {id} = useParams();
+    const [phoneVue, setPhoneVue] = useState(window.innerWidth < 819);
     const accommodation = getAccommodation(id);
 
     if (accommodation === undefined) {
@@ -20,6 +21,7 @@ const Accommodations = () => {
     } else
         useEffect(() => {
             colorStars(accommodation.rating);
+            window.addEventListener("resize", () => setPhoneVue(isPhoneVue()));
         })
     return (
         <div className="accommodations">
@@ -43,13 +45,15 @@ const Accommodations = () => {
                                 <p>{accommodation.host.name}</p>
                                 <img src={accommodation.host.picture} alt={accommodation.host.name}/>
                             </div>
-                            <div className="rating">
+                            <div onLoad={() => colorStars(accommodation.rating)} className="rating">
                             </div>
                         </div>
                     </div>
                     <div className="description">
-                        <Collapse name="Description" content={accommodation.description} minHeightContent={"250px"}/>
-                        <Collapse name="Équipements" content={arrayToString(accommodation.equipments)} minHeightContent={"250px"}/>
+                        <Collapse name="Description" content={accommodation.description} minHeightContent={"250px"}
+                                  width={phoneVue ? "100%" : ""}/>
+                        <Collapse name="Équipements" content={arrayToString(accommodation.equipments)}
+                                  minHeightContent={"250px"} width={phoneVue ? "100%" : ""}/>
                     </div>
                 </div>
             </div>
@@ -76,6 +80,8 @@ function colorStars(rating) {
     let redStarsAmount = parseInt(rating);
     const ratingDiv = document.querySelector(".rating");
 
+    if (ratingDiv.childElementCount !== 0) return;
+
     for (let i = 0; i < 5; i++) {
         const star = document.createElement("img");
 
@@ -87,6 +93,10 @@ function colorStars(rating) {
         ratingDiv.appendChild(star);
         redStarsAmount--;
     }
+}
+
+function isPhoneVue() {
+    return window.innerWidth < 819;
 }
 
 export default Accommodations;

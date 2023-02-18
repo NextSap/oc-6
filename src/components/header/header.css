@@ -17,3 +17,28 @@
     font-weight: 500;
     text-decoration: none;
 }
+
+@media screen and (max-width: 819px) {
+    .header {
+        margin: 25px 21px 25px 21px;
+        text-decoration: none;
+    }
+
+    .header img {
+        width: 100px;
+        text-decoration: none;
+    }
+
+    .header nav {
+        display: flex;
+        justify-content: space-between;
+        width: 175px;
+        text-decoration: none;
+    }
+
+    .link span {
+        font-size: 15px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
