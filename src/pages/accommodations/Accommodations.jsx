@@ -22,6 +22,7 @@ const Accommodations = () => {
         useEffect(() => {
             colorStars(accommodation.rating);
             window.addEventListener("resize", () => setPhoneVue(isPhoneVue()));
+            window.scrollTo(0, 0);
         })
     return (
         <div className="accommodations">
