@@ -17,6 +17,10 @@ const Header = () => {
     );
 };
 
+
+/**
+ * Change the status of the navigation bar
+ */
 function changeNavStatusListener() {
     const linkArray = document.querySelectorAll(".link span");
     linkArray.forEach(link => {

@@ -6,10 +6,16 @@ const Slideshow = ({pictures}) => {
     const [index, setIndex] = useState(0);
     const pictureAmount = pictures.length;
 
+    /**
+     * Change the index of the picture to display the previous image
+     */
     function previousImage() {
         setIndex(index === 0 ? pictureAmount - 1 : index - 1);
     }
 
+    /**
+     * Change the index of the picture to display the next image
+     */
     function nextImage() {
         setIndex(index === pictureAmount - 1 ? 0 : index + 1);
     }

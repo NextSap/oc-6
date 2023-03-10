@@ -1,5 +1,4 @@
 .footer {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,7 +7,6 @@
     width: 100%;
     color: white;
     background-color: black;
-    bottom: 0;
 }
 
 .footer p {

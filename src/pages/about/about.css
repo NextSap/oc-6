@@ -1,5 +1,9 @@
 .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: auto;
+    min-height: 100%;
 }
 
 .about-background {
