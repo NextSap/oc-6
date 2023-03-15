@@ -1,5 +1,6 @@
 .error {
     overflow: auto;
+    height: 100%;
 }
 
 .error-container {
@@ -8,6 +9,7 @@
     justify-content: space-around;
     align-items: center;
     color: #FF6060;
+    height: 700px;
 }
 
 .error-container div {
@@ -34,5 +36,25 @@
     font-size: 18px;
     text-decoration: underline;
     cursor: pointer;
-    padding-top: 180px;
+}
+
+@media screen and (max-width: 819px) {
+    .error-container{
+        height: 500px;
+    }
+    .error-container div h1 {
+        font-size: 180px;
+    }
+    .error-container div p {
+        font-size: 18px;
+    }
+    .backlink {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .error-container div h1 {
+        font-size: 144px;
+    }
 }

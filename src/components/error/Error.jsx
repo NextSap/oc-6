@@ -15,9 +15,7 @@ const Error = () => {
                     <h1>{error.status}</h1>
                     <p>Oups! La page que vous demandez n'existe pas.</p>
                 </div>
-                <p onClick={() => {
-                    navigate("/")
-                }} className="backlink">Retourner sur la page d'accueil</p>
+                <p onClick={() => navigate("/")} className="backlink">Retourner sur la page d'accueil</p>
             </div>
         </div>
     );
