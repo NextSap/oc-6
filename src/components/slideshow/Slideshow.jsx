@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Arrow from "../../assets/arrow_carousel.png";
 import "./slideshow.css";
 
@@ -22,8 +22,8 @@ const Slideshow = ({pictures}) => {
 
     return (
         <div className="slideshow">
+            <img className="slideshow-picture" src={pictures[index]} alt="Image de l'hébergement"/>
             <div style={{display: pictureAmount <= 1 ? "none" : null}} className="slideshow-container">
-                <img className="slideshow-picture" src={pictures[index]} alt="Image de l'hébergement"/>
                 <div className="left-arrow-div arrow-navigation-div">
                     <img onClick={previousImage} className="left-arrow" src={Arrow} alt="Flèche gauche"/>
                 </div>
