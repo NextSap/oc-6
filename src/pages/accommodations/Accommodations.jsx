@@ -13,14 +13,14 @@ import Footer from "../../components/footer/Footer";
 
 const Accommodations = () => {
     const {id} = useParams();
-    const [phoneVue, setPhoneVue] = useState(window.innerWidth < 819);
+    const [phoneVue, setPhoneVue] = useState(isPhoneVue());
     const accommodation = getAccommodation(id);
 
     if (accommodation === undefined) {
         throw new Response("", {status: 404})
     } else
         useEffect(() => {
-            colorStars(accommodation.rating);
+            createStars(accommodation.rating);
             window.addEventListener("resize", () => setPhoneVue(isPhoneVue()));
             window.scrollTo(0, 0);
         })
@@ -46,7 +46,7 @@ const Accommodations = () => {
                                 <p>{accommodation.host.name}</p>
                                 <img src={accommodation.host.picture} alt={accommodation.host.name}/>
                             </div>
-                            <div onLoad={() => colorStars(accommodation.rating)} className="rating">
+                            <div onLoad={() => createStars(accommodation.rating)} className="rating">
                             </div>
                         </div>
                     </div>
@@ -63,6 +63,11 @@ const Accommodations = () => {
     );
 };
 
+/**
+ * Get accommodation by its id from the accommodations.json file
+ * @param {String} id - the id of the accommodation
+ * @returns {JSON} - the accommodation object
+ */
 function getAccommodation(id) {
     let returnAccommodation;
     accommodations.forEach(accommodation => {
@@ -73,11 +78,20 @@ function getAccommodation(id) {
     return returnAccommodation;
 }
 
+/**
+ * Convert an array to a string
+ * @param {String[]} array - the array to convert
+ * @returns {String} - the string
+ */
 function arrayToString(array) {
     return array.join("\n");
 }
 
-function colorStars(rating) {
+/**
+ * Create the stars of the rating
+ * @param {Number} rating - the rating of the accommodation
+ */
+function createStars(rating) {
     let redStarsAmount = parseInt(rating);
     const ratingDiv = document.querySelector(".rating");
 
@@ -97,6 +111,10 @@ function colorStars(rating) {
     }
 }
 
+/**
+ * Check if the window is in phone vue
+ * @returns {boolean} - true if the window is in phone vue
+ */
 function isPhoneVue() {
     return window.innerWidth < 819;
 }

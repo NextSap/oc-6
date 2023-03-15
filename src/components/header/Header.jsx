@@ -5,9 +5,7 @@ import RedLogo from "../../assets/logo_red.png";
 
 const Header = () => {
     return (
-        <div onLoad={() => {
-            changeNavStatusListener()
-        }} className="header">
+        <div onLoad={() => changeNavStatusListener()} className="header">
             <img src={RedLogo} alt="Logo Kasa rouge"/>
             <nav>
                 <Link className="link" to="/"><span id="/">Accueil</span></Link>
@@ -19,7 +17,7 @@ const Header = () => {
 
 
 /**
- * Change the status of the navigation bar
+ * Apply a border-bottom to the current page link in the header based on the current url
  */
 function changeNavStatusListener() {
     const linkArray = document.querySelectorAll(".link span");
