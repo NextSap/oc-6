@@ -3,9 +3,7 @@
     width: 100%;
     border-radius: 25px;
     color: white;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    position: relative;
 }
 
 .slideshow-container {
@@ -22,7 +20,16 @@
     margin: 0 10px 0 10px;
 }
 
-.slideshow img {
+.slideshow-picture {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.arrow-navigation-div img {
     height: 80px;
 }
 

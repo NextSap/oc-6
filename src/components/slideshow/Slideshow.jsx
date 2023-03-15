@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Arrow from "../../assets/arrow_carousel.png";
 import "./slideshow.css";
 
@@ -21,13 +21,14 @@ const Slideshow = ({pictures}) => {
     }
 
     return (
-        <div className="slideshow" style={{backgroundImage: "url('" + pictures[index] + "')"}}>
+        <div className="slideshow">
             <div style={{display: pictureAmount <= 1 ? "none" : null}} className="slideshow-container">
-                <div className="left-arrow-div">
+                <img className="slideshow-picture" src={pictures[index]} alt="Image de l'hébergement"/>
+                <div className="left-arrow-div arrow-navigation-div">
                     <img onClick={previousImage} className="left-arrow" src={Arrow} alt="Flèche gauche"/>
                 </div>
                 <p>{index + 1}/{pictureAmount}</p>
-                <div className="right-arrow-div">
+                <div className="right-arrow-div arrow-navigation-div">
                     <img onClick={nextImage} className="right-arrow" src={Arrow} alt="Flèche droite"/>
                 </div>
             </div>

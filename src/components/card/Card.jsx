@@ -8,9 +8,7 @@ const Card = (props) => {
     };
     const navigate = useNavigate();
     return (
-        <div onClick={() => {
-            navigate("/accommodations/" + props.id)
-        }} className="card" style={style}>
+        <div onClick={() => navigate("/accommodations/" + props.id)} className="card" style={style}>
             <p>{props.title}</p>
         </div>
     );

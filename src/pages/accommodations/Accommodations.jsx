@@ -14,21 +14,18 @@ import Footer from "../../components/footer/Footer";
 const Accommodations = () => {
     const {id} = useParams();
     const [phoneVue, setPhoneVue] = useState(isPhoneVue());
-    const accommodation = getAccommodation(id);
+    const accommodation = getAccommodationById(id);
 
-    if (accommodation === undefined) {
-        throw new Response("", {status: 404})
-    } else
-        useEffect(() => {
-            createStars(accommodation.rating);
-            window.addEventListener("resize", () => setPhoneVue(isPhoneVue()));
-            window.scrollTo(0, 0);
-        })
+    useEffect(() => {
+        createStars(accommodation.rating);
+        window.addEventListener("resize", () => setPhoneVue(isPhoneVue()));
+        window.scrollTo(0, 0);
+    })
+
     return (
         <div className="accommodations">
             <Header/>
             <div className="accommodations-container">
-                <div className="test"></div>
                 <Slideshow pictures={accommodation.pictures}/>
                 <div className="informations-section">
                     <div className="article-header">
@@ -36,8 +33,8 @@ const Accommodations = () => {
                             <h1>{accommodation.title}</h1>
                             <h2>{accommodation.location}</h2>
                             <div className="tags">
-                                {accommodation.tags.map(tag => {
-                                    return (<Tag key={tag} tag={tag}/>);
+                                {accommodation.tags.map((tag, index) => {
+                                    return (<Tag key={index}>{tag}</Tag>);
                                 })}
                             </div>
                         </div>
@@ -68,18 +65,22 @@ const Accommodations = () => {
  * @param {String} id - the id of the accommodation
  * @returns {JSON} - the accommodation object
  */
-function getAccommodation(id) {
+function getAccommodationById(id) {
     let returnAccommodation;
     accommodations.forEach(accommodation => {
         if (accommodation.id === id) {
             returnAccommodation = accommodation;
         }
     });
+
+    if (returnAccommodation === undefined)
+        throw new Response("", {status: 404})
+
     return returnAccommodation;
 }
 
 /**
- * Convert an array to a string
+ * Convert an array to a string with each element on a new line
  * @param {String[]} array - the array to convert
  * @returns {String} - the string
  */

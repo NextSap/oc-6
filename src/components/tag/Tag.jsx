@@ -1,10 +1,10 @@
 import React from 'react';
 import "./tag.css";
 
-const Tag = ({tag}) => {
+const Tag = (props) => {
     return (
         <div className="tag">
-            <p>{tag}</p>
+            <p>{props.children}</p>
         </div>
     );
 };
